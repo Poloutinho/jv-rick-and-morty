@@ -5,7 +5,7 @@ import mate.academy.rickandmorty.dto.CharacterDto;
 import mate.academy.rickandmorty.model.LocalCharacter;
 
 public interface CharacterService {
-    LocalCharacter getRandomCharacter();
+    CharacterDto getRandomCharacter();
 
-    List<CharacterDto> findByNamePart(String namePart);
+    List<CharacterDto> findByNamePart(String name);
 }

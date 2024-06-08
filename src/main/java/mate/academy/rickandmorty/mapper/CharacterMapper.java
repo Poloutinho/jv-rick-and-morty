@@ -9,8 +9,9 @@ import org.mapstruct.Mapping;
 
 @Mapper(config = MapperConfig.class)
 public interface CharacterMapper {
-    @Mapping(source = "externalId", target = "id")
+    @Mapping(target = "externalId", source = "id")
     LocalCharacter toModel(ResponseDto apiResponseDto);
 
+    @Mapping(target = "id", source = "externalId")
     CharacterDto toDto(LocalCharacter character);
 }
